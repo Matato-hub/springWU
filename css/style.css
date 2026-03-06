@@ -1,0 +1,30 @@
+.wrapper{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 25vw 1fr;
+    grid-template-rows: 20vh 200vh 20vh;
+    grid-template-areas: 
+    'head head'
+    'nav main'
+    ;
+}
+
+main{
+    grid-area: main;
+    background-color: rgb(250, 241, 113);
+}
+
+nav{
+    grid-area: nav;
+    background-color: aqua;
+}
+
+header{
+    grid-area: head;
+    background-color: deeppink;
+}
+
+footer{
+    grid-area: fot;
+}
