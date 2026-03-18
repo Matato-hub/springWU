@@ -9,6 +9,19 @@
     'nav main'
     ;
     
+    /* bakgrund */
+
+background-image:    url(../img/scroll_top.png),
+                     url(../img/scroll_botten.png),
+                     url(../img/scroll_moddle.png);
+
+background-repeat:   no-repeat,
+                     no-repeat,
+                     repeat-y;
+
+background-position: left 0 top -12px,
+                     left 0 bottom -12px,
+                     left 0 top 0;
 }
 
 main{
@@ -78,3 +91,5 @@ body{
 .fade-layer.visible{
     display: block;
 }
+
+
