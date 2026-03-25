@@ -3,25 +3,16 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 25vw 1fr;
-    grid-template-rows: 20vh 200vh 20vh;
+    grid-template-rows: 20vh 15vh 200vh 20vh;
     grid-template-areas: 
     'head head'
     'nav main'
+    'main main'
+    'fot fot'
     ;
     
     /* bakgrund */
 
-background-image:    url(../img/scroll_top.png),
-                     url(../img/scroll_botten.png),
-                     url(../img/scroll_moddle.png);
-
-background-repeat:   no-repeat,
-                     no-repeat,
-                     repeat-y;
-
-background-position: left 0 top -12px,
-                     left 0 bottom -12px,
-                     left 0 top 0;
 }
 
 main{
@@ -30,8 +21,8 @@ main{
 }
 
 nav{
+    background-color: chocolate;
     grid-area: nav;
-    background-color: aqua;
 }
 
 header{
@@ -41,6 +32,7 @@ header{
 
 footer{
     grid-area: fot;
+    background-color: aqua;
 }
 
 
@@ -62,11 +54,25 @@ body{
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
+
+    background-image:    url(../img/scroll_top.png),
+                         url(../img/scroll_botten.png),
+                         url(../img/scroll_moddle.png);
+
+    background-repeat:   no-repeat,
+                         no-repeat,
+                         repeat-y;
+
+    background-position: left 0 top -12px,
+                         left 0 bottom -12px,
+                         left 0 top 0;
+
 }
 
 .menu-button{
     cursor: pointer;
     display: inline;
+
 }
 
 /* .menu-button i.material-icons{
