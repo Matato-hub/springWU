@@ -3,10 +3,10 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 25vw 1fr;
-    grid-template-rows: 20vh 15vh 200vh 20vh;
+    grid-template-rows: 15vh 10vh 200vh 20vh;
     grid-template-areas: 
     'head head'
-    'nav main'
+    'nav nav'
     'main main'
     'fot fot'
     ;
@@ -23,6 +23,12 @@ main{
 nav{
     background-color: chocolate;
     grid-area: nav;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 header{
@@ -36,8 +42,13 @@ footer{
 }
 
 
+h1 {
+    font-size: 80px;
+}
 
-
+.d20 {
+    height: 30%;
+}
 
 /* saker till meny knappen och menyn etc etc */
 body{
