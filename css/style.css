@@ -43,12 +43,42 @@ footer{
 
 
 h1 {
-    font-size: 80px;
+    font-size: 40px;
+    justify-self: center;
+    align-self: center;
 }
 
 .d20 {
-    height: 30%;
+    height: 20%;
 }
+
+.navlink {
+    text-decoration: none;
+    color: black;
+}
+
+.navlink:hover{
+color: darkred;
+}
+
+.navlink:current{
+    color: brown;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* saker till meny knappen och menyn etc etc */
 body{
