@@ -1,23 +1,43 @@
+:root{
+    --main-color: 
+    --main-text-color:
+}
+
+
+body {
+ 
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .wrapper{
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: 25vw 1fr;
-    grid-template-rows: 15vh 10vh 200vh 20vh;
+    grid-template-rows: 10vh 8vh 100vh 20vh;
     grid-template-areas: 
-    'head head'
-    'nav nav'
-    'main main'
-    'fot fot'
+    'head'
+    'nav'
+    'main'
+    'fot'
     ;
     
     /* bakgrund */
+
 
 }
 
 main{
     grid-area: main;
-    background-color: rgb(250, 241, 113);
+    background-color: rgb(143, 116, 93);
 }
 
 nav{
@@ -43,9 +63,10 @@ footer{
 
 
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     justify-self: center;
     align-self: center;
+    margin: 10px;
 }
 
 .d20 {
@@ -61,8 +82,13 @@ h1 {
 color: darkred;
 }
 
-.navlink:current{
-    color: brown;
+.current{
+    color: green;
+}
+
+h2{
+    margin: 20px;
+    justify-self: center;
 }
 
 
@@ -72,71 +98,27 @@ color: darkred;
 
 
 
-
-
-
-
-
-
-
-
-/* saker till meny knappen och menyn etc etc */
-body{
-    margin: 0;
-}
-
-.menu{
-    height: 100vh;
-    width: 80vw;
-    background: hotpink;
-    position: fixed;
-    top: 0;
-    left: -90vw;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
-
-    background-image:    url(../img/scroll_top.png),
-                         url(../img/scroll_botten.png),
-                         url(../img/scroll_moddle.png);
-
-    background-repeat:   no-repeat,
-                         no-repeat,
-                         repeat-y;
-
-    background-position: left 0 top -12px,
-                         left 0 bottom -12px,
-                         left 0 top 0;
+/* BARA MOBIl */
+@media screen and (max-width:500px) {
+ main{
+    padding: 10px;
+ }
 
 }
+/* BARA dessktop */
+@media screen and (min-width:501px) {
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    
+    h1{
+        flex-direction: row;
+        font-size: 50px;
+    }
 
-.menu-button{
-    cursor: pointer;
-    display: inline;
+    .d20 {
+    height: 40%;
+    }
 
 }
-
-/* .menu-button i.material-icons{
-    font-size: 2.5rem;
-} */
-
-.show{
-    left: 0;
-}
-
-.fade-layer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 5;
-}
-
-.fade-layer.visible{
-    display: block;
-}
-
-
