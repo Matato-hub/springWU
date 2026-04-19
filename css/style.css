@@ -1,11 +1,7 @@
-:root{
-    --main-color: 
-    --main-text-color:
-}
-
 
 body {
- 
+    overflow-x: hidden;
+    background-color: antiquewhite;
 }
 
 body::-webkit-scrollbar {
@@ -22,13 +18,16 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-rows: 10vh 8vh 100vh 20vh;
+    grid-template-rows: 10vh 8vh auto 10vh;
     grid-template-areas: 
     'head'
     'nav'
     'main'
     'fot'
     ;
+
+        
+    overflow-x: hidden;
     
     /* bakgrund */
 
@@ -37,11 +36,11 @@ body {
 
 main{
     grid-area: main;
-    background-color: rgb(143, 116, 93);
+    background-color: antiquewhite;
 }
 
 nav{
-    background-color: chocolate;
+    background-color: rgb(202, 165, 138);
     grid-area: nav;
 
     display: flex;
@@ -53,12 +52,15 @@ nav{
 
 header{
     grid-area: head;
-    background-color: deeppink;
+    background-color: rgb(88, 55, 36);
 }
 
 footer{
     grid-area: fot;
-    background-color: aqua;
+    background-color: rgb(202, 165, 138);
+    display: flex;
+    padding: auto;
+    justify-content: center;
 }
 
 
@@ -67,6 +69,11 @@ h1 {
     justify-self: center;
     align-self: center;
     margin: 10px;
+    color: antiquewhite;
+
+font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .d20 {
@@ -76,6 +83,10 @@ h1 {
 .navlink {
     text-decoration: none;
     color: black;
+      font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .navlink:hover{
@@ -83,30 +94,53 @@ color: darkred;
 }
 
 .current{
-    color: green;
+    color:  rgb(88, 55, 36);
 }
 
 h2{
     margin: 20px;
     justify-self: center;
+    font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
+p{
+     font-family: "Modern Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+li{
+     font-family: "Modern Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.imgs {
+    justify-self: center;
+    align-self: center;
+    width: 25vw;
+}
 
+.creature-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 
 
 /* BARA MOBIl */
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
  main{
-    padding: 10px;
+    padding: 15px;
  }
 
 }
 /* BARA dessktop */
-@media screen and (min-width:501px) {
+@media screen and (min-width:577px) {
     header{
         display: flex;
         justify-content: center;
@@ -117,8 +151,22 @@ h2{
         font-size: 50px;
     }
 
+    h2{
+        font-size: 20;
+        margin-top: 2%;
+    }
+
     .d20 {
     height: 40%;
+    }
+
+    .navlink{
+        font-size: 30px;
+    }
+
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
 }
